@@ -27,6 +27,11 @@ public class ProductServiceImpl implements ProductService{
 	public ProductServiceImpl() {
 		System.out.println("ProductServiceImpl.java "+this.getClass());
 	}
+	
+	public String getProdName(String prodName) throws Exception{
+		System.out.println("ProductDaoImpl.java getProdName ½ÇÇàµÊ");
+		return productDao.getProdName(prodName);
+	}
 
 	public void addProduct(Product product) throws Exception {
 		productDao.insertProduct(product);

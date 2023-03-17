@@ -32,6 +32,11 @@ public class ProductDaoImpl implements ProductDao{
 		return sqlSession.selectOne("ProductMapper.getProduct", prodNo);
 	}
 	
+	public String getProdName(String prodName) throws Exception{
+		System.out.println("ProductDaoImpl.java getProdName ½ÇÇàµÊ");
+		return sqlSession.selectOne("ProductMapper.getProdName", prodName);
+	}
+	
 	public void insertProduct(Product product)throws Exception{
 		System.out.println("ProductDaoImpl.java insertProduct ½ÇÇàµÊ");
 		sqlSession.insert("ProductMapper.addProduct", product);
